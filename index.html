@@ -1,0 +1,219 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        div.cal {
+            border-radius: 20px;
+            background-color: black;
+            border-style: solid;
+            border-color: linear-gradient(45deg, #0a0a0a, #3a4452);
+            box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+            height: 670px;
+            width: 430px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            height: 25%;
+            margin: none;
+            padding: 10px;
+            font-size: 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: transparent;
+            color: white;
+            text-align: right;
+        }
+
+        button {
+            width: 80px;
+            margin: 10px;
+            height: 80px;
+            cursor: pointer;
+            font-size: 25px;
+            color: rgb(244, 248, 251);
+            background-color: orange;
+            border: none;
+            border-radius: 40%;
+            box-shadow: 5px 5px 30px rgb(255, 255, 255);
+            border-color: linear-gradient(45deg, #0a0a0a, #3a4452);
+            box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.5);
+        }
+
+        button:hover {
+            border-radius: 100%;
+            box-shadow: 0px 0px 10px rgb(4, 4, 8);
+            border-color: linear-gradient(45deg, #0a0a0a, #3a4452);
+            box-shadow: 0px 3px 5px rgba(113, 115, 119, 0.5);
+        }
+
+        body {
+            background-color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+        }
+        .gray{
+            background-color: rgb(32, 32, 32);
+        }
+
+        .acgray{
+            background-color: rgb(115, 114, 114);
+        }
+        .equals{
+            background-color: rgb(250, 8, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cal">
+        <div class="text">
+            <input type="text" width="100%" placeholder="0">
+        </div>
+        <div class="bottom">
+            <div class="li1">
+                <button class="acgray"onclick="
+                    val = 0;
+                    document.querySelector('input').value = val;
+
+                    ">AC</button>
+                <button class="acgray" onclick="
+                val = val/10;
+                val = Math.floor(val);
+                console.log(Math.floor(val));
+                document.querySelector('input').value = val;
+
+                ">DEL</button>
+                <button  onclick="
+                    
+                val = val+'%';
+                document.querySelector('input').value = val;
+                
+                ">%</button>
+                <button  onclick="
+                    
+                val = val+'/';
+                document.querySelector('input').value = val;
+                
+                ">/</button>
+            </div>
+            <div class="li2">
+
+                <button  class="gray" onclick="
+                    
+                    val = val+'7';
+                    document.querySelector('input').value = val;
+                    
+                    ">7</button>
+                <button class="gray" onclick="
+                    
+                val = val+'8';
+                document.querySelector('input').value = val;
+                
+                ">8</button>
+                <button class="gray" onclick="
+                    
+                val = val+'9';
+                document.querySelector('input').value = val;
+                
+                ">9</button>
+                <button onclick="
+                    
+                val = val+'*';
+                document.querySelector('input').value = val;
+                
+                ">*</button>
+
+            </div>
+            <div class="li3">
+
+                <button  class="gray" onclick="
+                    
+                val = val+'4';
+                document.querySelector('input').value = val;
+                
+                ">4</button>
+                <button class="gray" onclick="
+                    
+                val = val+'5';
+                document.querySelector('input').value = val;
+                
+                ">5</button>
+                <button class="gray" onclick="
+                    
+                val = val+'6';
+                document.querySelector('input').value = val;
+                
+                ">6</button>
+                <button  onclick="
+                    
+                val = val+'-';
+                document.querySelector('input').value = val;
+                
+                ">-</button>
+            </div>
+            <div class="li4">
+
+                <button class="gray"onclick="
+                    
+                val = val+'1';
+                document.querySelector('input').value = val;
+                
+                ">1</button>
+                <button class="gray" onclick="
+                    
+                val = val+'2';
+                document.querySelector('input').value = val;
+                
+                ">2</button>
+                <button class="gray"onclick="
+                    
+                val = val+'3';
+                document.querySelector('input').value = val;
+                
+                ">3</button>
+                <button  onclick="
+                    
+                val = val+'+';
+                document.querySelector('input').value = val;
+                
+                ">+</button>
+            </div>
+            <div class="li5">
+
+                <button class="gray" onclick="
+                    
+                val = val+'00';
+                document.querySelector('input').value = val;
+                
+                ">00</button>
+                <button class="gray" onclick="
+                    
+                val = val+'0';
+                document.querySelector('input').value = val;
+                
+                ">0</button>
+                <button class="gray" onclick="
+                val = val+'.';
+                document.querySelector('input').value = val;
+                ">.</button>
+                <button class="equals" onclick="
+                
+                val = eval(document.querySelector('input').value);
+                document.querySelector('input').value = val;
+                ">=</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let val = "";
+    </script>
+</body>
+
+</html>
